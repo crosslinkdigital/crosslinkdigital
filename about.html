@@ -62,6 +62,16 @@
   .arm h3 { font-family: var(--font-display); font-size: 1.8rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.8rem; color: var(--white); }
   .arm p { font-size: 0.88rem; color: var(--grey-text); line-height: 1.6; }
 
+  /* FOUNDER */
+  .founder-section { max-width: 900px; margin: 0 auto; padding: 6rem 2rem; display: grid; grid-template-columns: 340px 1fr; gap: 5rem; align-items: center; }
+  .founder-image { border-radius: 12px; overflow: hidden; height: 420px; }
+  .founder-image img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+  .founder-content .eyebrow { margin-bottom: 1rem; }
+  .founder-content h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1; text-transform: uppercase; margin-bottom: 1.5rem; color: var(--white); }
+  .founder-content p { font-size: 1rem; color: #bbb; line-height: 1.9; margin-bottom: 1rem; }
+  .founder-name { font-family: var(--font-display); font-size: 1.4rem; letter-spacing: 0.05em; color: var(--white); margin-top: 1.5rem; }
+  .founder-title { font-size: 0.82rem; color: var(--orange); letter-spacing: 0.1em; text-transform: uppercase; }
+
   /* MISSION */
   .mission { max-width: 760px; margin: 0 auto; padding: 6rem 2rem; text-align: center; }
   .mission h2 { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1; text-transform: uppercase; margin-bottom: 1.5rem; color: var(--white); }
@@ -76,6 +86,8 @@
     nav { padding: 1rem 1.5rem; }
     .nav-links { display: none; }
     .arms-grid { grid-template-columns: 1fr; }
+    .founder-section { grid-template-columns: 1fr; gap: 2rem; padding: 4rem 1.5rem; }
+    .founder-image { height: 320px; }
   }
 </style>
 </head>
@@ -94,17 +106,17 @@
 <div class="about-hero">
   <div class="eyebrow">About Crosslink</div>
   <h1>We Don't Just<br>Build Campaigns.<br>We Build <span class="accent">Better</span><br>Businesses.</h1>
-  <p class="lead">Crosslink Digital is the marketing automation arm of the Crosslink Group — an Australian business built on a simple belief: that small and medium businesses deserve the same tools, reach and results as the big players.</p>
+  <p class="lead">Crosslink Digital is the marketing automation arm of the Crosslink Group. An Australian business built on a simple belief: that small and medium businesses deserve the same tools, reach and results as the big players.</p>
 </div>
 
 <div class="divider"></div>
 
 <div class="narrative">
   <h2>Our Story</h2>
-  <p>The Crosslink Group started with a straightforward observation: <strong>most small business owners are brilliant at what they do, and terrible at marketing themselves.</strong> Not because they're not smart — but because they're flat out doing the actual work.</p>
-  <p>We saw this across industries. A plumber in Penrith doing exceptional work, losing jobs to a competitor who posts on Facebook twice a week. An electrician in Brisbane, fully booked through word of mouth — until the referrals dried up one quiet winter.</p>
-  <p>The problem was never the quality of their work. It was visibility. And visibility has traditionally required either a big budget or a lot of time — neither of which most tradies have.</p>
-  <p><strong>Crosslink Digital was built to change that.</strong> Using AI automation, we generate complete, professional marketing campaign packs in minutes — copy, images, branded video, voiceover — and deliver them straight to the tradie's inbox. They post it. The phone rings.</p>
+  <p>The Crosslink Group started with a straightforward observation: <strong>most small business owners are brilliant at what they do, and the marketing side rarely gets the attention it deserves.</strong> Not because they don't care. Because they're flat out doing the actual work.</p>
+  <p>We saw this across industries. A plumber in Penrith doing exceptional work, losing jobs to a competitor who posts on Facebook twice a week. An electrician in Brisbane, fully booked through word of mouth, until the referrals dried up one quiet winter.</p>
+  <p>The problem was never the quality of their work. It was visibility. And visibility has traditionally required either a big budget or a lot of time.</p>
+  <p><strong>Crosslink Digital was built to change that.</strong> Using AI automation, we generate complete, professional marketing campaign packs in minutes and deliver them straight to the tradie's inbox. They post it. The phone rings.</p>
   <p>No agency markups. No lock-in contracts. No learning curve. Just results.</p>
 </div>
 
@@ -132,6 +144,22 @@
   </div>
 </div>
 
+<!-- FOUNDER -->
+<div class="founder-section">
+  <div class="founder-image">
+    <img src="https://res.cloudinary.com/dk2yrrrdd/image/upload/v1775463603/Website_dbcayb.png" alt="Hayo Jongejans — Founder, Crosslink Digital" />
+  </div>
+  <div class="founder-content">
+    <div class="eyebrow">The person behind it</div>
+    <h2>Hi, I'm<br>Hayo.</h2>
+    <p>I've spent years helping businesses across Australia and Asia grow faster and work smarter. I built Crosslink Digital because I kept seeing the same story: brilliant tradies losing work to competitors who simply showed up online more often.</p>
+    <p>That felt wrong. So we fixed it.</p>
+    <p>Crosslink Digital is built on one belief: that hardworking Australian tradies deserve the same marketing firepower as big companies, without the big agency price tag.</p>
+    <div class="founder-name">Hayo Jongejans</div>
+    <div class="founder-title">Founder, Crosslink Digital</div>
+  </div>
+</div>
+
 <div class="mission">
   <h2>What Drives Us</h2>
   <p class="mission-statement">"We're powered by <span>improving the way our clients do business</span> — day by day, job by job, post by post."</p>
@@ -144,10 +172,6 @@
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="https://cal.com/crosslinkdigital/30min">Book a Call</a>
-    <a href="mailto:hayo@crosslinkasia.com">Contact</a>
+    <a href="/cdn-cgi/l/email-protection#c8a0a9b1a788abbaa7bbbba4a1a6a3a9bba1a9e6aba7a5">Contact</a>
   </div>
-  <p>© 2026 Crosslink Digital · Part of the Crosslink Group &nbsp;·&nbsp; <a href="mailto:hayo@crosslinkasia.com">hayo@crosslinkasia.com</a></p>
-</footer>
-
-</body>
-</html>
+  <p>© 2026 Crosslink Digital · Part of the Crosslink Group &nbsp;·&nbsp; <a href="/cdn-cgi/l/email-protection#0e666f77614e6d7c
