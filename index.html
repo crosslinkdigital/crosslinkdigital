@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Crosslink Digital — Tradie Marketing on Autopilot</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -23,6 +23,9 @@
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.2rem 2rem; display: flex; justify-content: space-between; align-items: center; background: rgba(13,13,13,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.06); }
   .logo { font-family: var(--font-display); font-size: 1.6rem; letter-spacing: 0.05em; color: var(--white); text-decoration: none; }
   .logo span { color: var(--orange); }
+  .nav-links { display: flex; gap: 2rem; align-items: center; }
+  .nav-links a { color: #aaa; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--white); }
   nav a.cta-nav { background: var(--orange); color: var(--white); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.6rem 1.4rem; border-radius: 4px; text-decoration: none; transition: background 0.2s; }
   nav a.cta-nav:hover { background: var(--orange-dark); }
 
@@ -34,12 +37,10 @@
   .hero-sub { font-size: 1.05rem; color: #aaa; max-width: 480px; margin-bottom: 2.5rem; line-height: 1.7; }
   .hero-cta { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
   .hero-note { font-size: 0.82rem; color: var(--grey-text); width: 100%; }
-
   .btn-primary { background: var(--orange); color: var(--white); font-family: var(--font-body); font-weight: 700; font-size: 1rem; padding: 1rem 2.2rem; border: none; border-radius: 4px; text-decoration: none; cursor: pointer; transition: background 0.2s, transform 0.15s; display: inline-block; }
   .btn-primary:hover { background: var(--orange-dark); transform: translateY(-1px); }
   .btn-secondary { background: transparent; color: var(--white); font-family: var(--font-body); font-weight: 600; font-size: 1rem; padding: 1rem 2rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 4px; text-decoration: none; cursor: pointer; transition: border-color 0.2s; display: inline-block; }
   .btn-secondary:hover { border-color: var(--orange); color: var(--orange); }
-
   .hero-image { position: relative; height: 620px; animation: fadeUp 0.8s 0.2s ease both; }
   .hero-image img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
   .hero-image-badge { position: absolute; bottom: 2rem; left: -2rem; background: var(--orange); color: var(--white); padding: 1rem 1.5rem; border-radius: 8px; font-family: var(--font-display); font-size: 1.1rem; letter-spacing: 0.05em; }
@@ -50,6 +51,20 @@
   .ticker span { font-family: var(--font-display); font-size: 1.1rem; letter-spacing: 0.1em; color: var(--white); }
   .ticker span.dot { color: rgba(255,255,255,0.4); }
   @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+  /* PAIN SECTION */
+  .pain-section { background: var(--grey); padding: 6rem 2rem; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .pain-inner { max-width: 900px; margin: 0 auto; }
+  .pain-label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--orange); margin-bottom: 1rem; }
+  .pain-inner h2 { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; text-transform: uppercase; margin-bottom: 1rem; color: var(--white); }
+  .pain-inner .pain-intro { font-size: 1.1rem; color: #bbb; margin-bottom: 2.5rem; max-width: 600px; }
+  .pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-bottom: 3rem; }
+  .pain-item { background: var(--black); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 1.5rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.2s; }
+  .pain-item:hover { border-color: var(--orange); }
+  .pain-check { width: 24px; height: 24px; background: rgba(232,93,32,0.15); border: 1px solid var(--orange); border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+  .pain-check::after { content: '✓'; color: var(--orange); font-size: 12px; font-weight: 700; }
+  .pain-item p { font-size: 0.95rem; color: #ccc; line-height: 1.5; }
+  .pain-resolution { font-size: 1.1rem; color: var(--white); font-weight: 600; border-left: 3px solid var(--orange); padding-left: 1.2rem; }
 
   .section { padding: 6rem 2rem; max-width: 1100px; margin: 0 auto; }
   .section-label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.8rem; }
@@ -103,20 +118,21 @@
   .pricing-features li { padding: 0.55rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.88rem; color: #ccc; display: flex; align-items: center; gap: 0.7rem; }
   .pricing-features li::before { content: ''; width: 16px; height: 16px; background: var(--orange); border-radius: 50%; flex-shrink: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E"); background-size: 10px; background-repeat: no-repeat; background-position: center; }
 
-  .access-section { background: var(--grey); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 6rem 2rem; }
-  .access-inner { max-width: 520px; margin: 0 auto; text-align: center; }
-  .access-inner h2 { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 1rem; color: var(--white); }
-  .access-inner p { color: var(--grey-text); margin-bottom: 2rem; font-size: 0.95rem; }
-  .access-form { display: flex; flex-direction: column; gap: 0.8rem; }
-  .access-form input { background: var(--black); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 0.9rem 1.2rem; font-family: var(--font-body); font-size: 0.95rem; color: var(--white); width: 100%; transition: border-color 0.2s; }
-  .access-form input::placeholder { color: #555; }
-  .access-form input:focus { outline: none; border-color: var(--orange); }
-  .access-form button { background: var(--orange); color: var(--white); border: none; border-radius: 4px; padding: 1rem; font-family: var(--font-body); font-weight: 700; font-size: 1rem; cursor: pointer; transition: background 0.2s; }
-  .access-form button:hover { background: var(--orange-dark); }
-  .access-note { font-size: 0.78rem; color: #555; margin-top: 0.5rem; }
+  /* TALLY SECTION */
+  .tally-section { background: var(--grey); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 6rem 2rem; }
+  .tally-inner { max-width: 720px; margin: 0 auto; }
+  .tally-inner .section-label { text-align: center; display: block; margin-bottom: 0.8rem; }
+  .tally-inner h2 { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 0.8rem; color: var(--white); text-align: center; }
+  .tally-inner .tally-sub { color: var(--grey-text); margin-bottom: 2.5rem; font-size: 0.95rem; text-align: center; }
+  .tally-embed { border-radius: 8px; overflow: hidden; }
+
+  .schedule-section { padding: 6rem 2rem; max-width: 600px; margin: 0 auto; text-align: center; }
+  .schedule-section h2 { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4rem); text-transform: uppercase; margin-bottom: 1rem; color: var(--white); }
+  .schedule-section p { color: #aaa; margin-bottom: 2rem; font-size: 0.95rem; }
 
   footer { padding: 2rem; text-align: center; font-size: 0.8rem; color: #444; border-top: 1px solid rgba(255,255,255,0.04); }
   footer a { color: var(--orange); text-decoration: none; }
+  .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem; }
 
   @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
   .hero-eyebrow { animation: fadeUp 0.6s ease both; }
@@ -135,33 +151,40 @@
     .pricing-grid { grid-template-columns: 1fr; }
     .full-image-overlay { padding: 0 2rem; }
     nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .pain-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="#" class="logo">Crosslink<span>Digital</span></a>
-  <a href="#access" class="cta-nav">Get Started</a>
+  <a href="index.html" class="logo">Crosslink<span>Digital</span></a>
+  <div class="nav-links">
+    <a href="#how-it-works">How it works</a>
+    <a href="#pricing">Pricing</a>
+    <a href="about.html">About</a>
+  </div>
+  <a href="#get-started" class="cta-nav">Get Started Free</a>
 </nav>
 
 <section style="background: var(--black);">
   <div class="hero">
     <div class="hero-content">
       <div class="hero-eyebrow">For Australian Tradies</div>
-      <h1>Your Marketing.<br>On <span class="accent">Autopilot.</span></h1>
-      <p class="hero-sub">Ready-to-post ads across Facebook, Instagram, TikTok and more — copy, images, voiceover and branded video generated in 90 seconds. Delivered straight to your inbox.</p>
+      <h1>The Job's<br>Done.<br>Now Get <span class="accent">Paid</span><br>To Be Seen.</h1>
+      <p class="hero-sub">Your competitors are posting on Facebook and Instagram every week. You're not. That's why their phone rings and yours doesn't. We fix that — complete marketing content pack, delivered to your inbox in minutes.</p>
       <div class="hero-cta">
-        <a href="#access" class="btn-primary">Get Your Free Pack →</a>
+        <a href="#get-started" class="btn-primary">Get Your Free Pack →</a>
         <a href="#pricing" class="btn-secondary">See Pricing</a>
-        <span class="hero-note">No agency fees. No lock-in contracts. Just results.</span>
+        <span class="hero-note">No agency. No lock-in. No bullsh*t.</span>
       </div>
     </div>
     <div class="hero-image">
       <img src="https://res.cloudinary.com/dk2yrrrdd/image/upload/v1775377373/together-image_7_ey8bjh.png" alt="Tradie with van overlooking Sydney coast" />
       <div class="hero-image-badge">
         <span>Delivered in</span>
-        90 Seconds
+        90sec
       </div>
     </div>
   </div>
@@ -173,22 +196,59 @@
     <span>Instagram Posts</span><span class="dot">✦</span>
     <span>TikTok Videos</span><span class="dot">✦</span>
     <span>Branded Video</span><span class="dot">✦</span>
-    <span>AI Voiceover</span><span class="dot">✦</span>
+    <span>Commercial Grade Voiceover</span><span class="dot">✦</span>
     <span>Campaign Copy</span><span class="dot">✦</span>
     <span>3 Ready-To-Post Images</span><span class="dot">✦</span>
     <span>Facebook Ads</span><span class="dot">✦</span>
     <span>Instagram Posts</span><span class="dot">✦</span>
     <span>TikTok Videos</span><span class="dot">✦</span>
     <span>Branded Video</span><span class="dot">✦</span>
-    <span>AI Voiceover</span><span class="dot">✦</span>
+    <span>Commercial Grade Voiceover</span><span class="dot">✦</span>
     <span>Campaign Copy</span><span class="dot">✦</span>
     <span>3 Ready-To-Post Images</span><span class="dot">✦</span>
   </div>
 </div>
 
-<div class="section">
+<!-- PAIN SECTION -->
+<div class="pain-section">
+  <div class="pain-inner">
+    <div class="pain-label">Sound familiar?</div>
+    <h2>Does This<br>Describe You?</h2>
+    <p class="pain-intro">Most tradies we speak to are brilliant at what they do. The marketing side? That's a different story.</p>
+    <div class="pain-grid">
+      <div class="pain-item">
+        <div class="pain-check"></div>
+        <p>You're too busy on the tools to think about Instagram</p>
+      </div>
+      <div class="pain-item">
+        <div class="pain-check"></div>
+        <p>You rely on word of mouth but it's getting unpredictable</p>
+      </div>
+      <div class="pain-item">
+        <div class="pain-check"></div>
+        <p>You know you should be posting but never get around to it</p>
+      </div>
+      <div class="pain-item">
+        <div class="pain-check"></div>
+        <p>Agencies want $2,000+ a month and can't promise results</p>
+      </div>
+      <div class="pain-item">
+        <div class="pain-check"></div>
+        <p>Your competitors are showing up online and getting the calls</p>
+      </div>
+      <div class="pain-item">
+        <div class="pain-check"></div>
+        <p>You don't know what to write or how to make it look professional</p>
+      </div>
+    </div>
+    <p class="pain-resolution">If you nodded at any of those — you're exactly who we built this for.</p>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="section" id="how-it-works">
   <div class="section-label">How it works</div>
-  <h2>4 Steps.<br>90 Seconds.</h2>
+  <h2>4 Steps.<br>90sec.</h2>
   <div class="steps">
     <div class="step">
       <div class="step-num">1</div>
@@ -200,13 +260,13 @@
       <div class="step-num">2</div>
       <div class="step-icon">⚡</div>
       <h3>AI builds your campaign</h3>
-      <p>Copy, images, voiceover and a branded video — all generated automatically.</p>
+      <p>Copy, images, commercial voiceover and a branded video — all generated automatically.</p>
     </div>
     <div class="step">
       <div class="step-num">3</div>
       <div class="step-icon">📧</div>
       <h3>Pack lands in your inbox</h3>
-      <p>Everything delivered in 90 seconds. Ready to post, no editing needed.</p>
+      <p>Everything delivered in minutes. Ready to post, no editing needed.</p>
     </div>
     <div class="step">
       <div class="step-num">4</div>
@@ -223,10 +283,10 @@
   </div>
   <div class="split-content">
     <div class="section-label">Built for tradies</div>
-    <h2>You Focus On<br>The Work.</h2>
-    <p>Most tradies are too busy on the tools to worry about posting on Instagram. We get it. That's why we built a system that does it for you — professional marketing content in the time it takes to make a coffee.</p>
-    <p>No marketing degree needed. No agency retainer. Just fill in a form and we handle the rest.</p>
-    <a href="#access" class="btn-primary">Get Started →</a>
+    <h2>You Do The<br>Work. We<br>Do The Rest.</h2>
+    <p>The best tradies don't necessarily get the most jobs. The most visible ones do. We put your business in front of local homeowners every week — without you lifting a finger.</p>
+    <p>Professional marketing content, written for your trade, your suburb, your offer. Delivered to your inbox in minutes.</p>
+    <a href="#get-started" class="btn-primary">Get Started Free →</a>
   </div>
 </div>
 
@@ -247,11 +307,11 @@
     <div class="deliverable">
       <div class="deliverable-icon">🎬</div>
       <h4>Branded Promo Video</h4>
-      <p>15-second video with your logo, offer text, and AI voiceover.</p>
+      <p>10-second video with your logo, offer text, and voiceover.</p>
     </div>
     <div class="deliverable">
       <div class="deliverable-icon">🎙️</div>
-      <h4>AI Voiceover</h4>
+      <h4>Commercial Grade Voiceover</h4>
       <p>Professional voice reads your offer. No recording needed.</p>
     </div>
     <div class="deliverable">
@@ -261,7 +321,7 @@
     </div>
     <div class="deliverable">
       <div class="deliverable-icon">⚡</div>
-      <h4>Delivered in 90 Seconds</h4>
+      <h4>Delivered in Minutes</h4>
       <p>Straight to your inbox. No waiting, no back and forth.</p>
     </div>
   </div>
@@ -271,7 +331,7 @@
   <img src="https://res.cloudinary.com/dk2yrrrdd/image/upload/v1775377374/together-image_4_xjnx3g.png" alt="Trade tools on workbench" />
   <div class="full-image-overlay">
     <div class="full-image-text">
-      <h2>Stop Losing<br>Jobs To Tradies<br>Who Market<br>Better.</h2>
+      <h2>The Best<br>Tradie Doesn't<br>Always Win.<br>The Most<br>Visible One Does.</h2>
       <p>Your competitors are posting every week. Are you?</p>
     </div>
   </div>
@@ -281,7 +341,7 @@
   <div class="divider"></div>
   <div class="stat-row">
     <div class="stat">
-      <div class="stat-num">90s</div>
+      <div class="stat-num">90sec</div>
       <div class="stat-label">Campaign delivery time</div>
     </div>
     <div class="stat">
@@ -305,8 +365,8 @@
   </div>
   <div class="split-content">
     <div class="section-label">More jobs. Less effort.</div>
-    <h2>Get The Call<br>Before They<br>Even Google.</h2>
-    <p>When your content shows up every week across Facebook and Instagram, you become the tradie people already know before they even need a quote.</p>
+    <h2>Be The Tradie<br>They Already<br>Know.</h2>
+    <p>When your content shows up every week across Facebook and Instagram, you become the tradie people already trust before they even need a quote.</p>
     <p>That's the difference between chasing work and being booked solid.</p>
     <a href="#pricing" class="btn-primary">See Our Plans →</a>
   </div>
@@ -325,13 +385,13 @@
       <ul class="pricing-features">
         <li>Unlimited campaign packs</li>
         <li>3 AI images per campaign</li>
-        <li>Branded 15-second video</li>
-        <li>AI voiceover included</li>
+        <li>Branded 10-second video</li>
+        <li>Commercial grade voiceover</li>
         <li>Full campaign copy doc</li>
         <li>FB, Instagram, TikTok ready</li>
-        <li>Delivered in 90 seconds</li>
+        <li>Delivered in minutes</li>
       </ul>
-      <a href="#access" class="btn-primary" style="width:100%;text-align:center;display:block;">Get Started Today →</a>
+      <a href="#get-started" class="btn-primary" style="width:100%;text-align:center;display:block;">Get Started Free →</a>
     </div>
     <div class="pricing-card">
       <div class="pricing-name">Managed Socials</div>
@@ -347,37 +407,41 @@
         <li>Performance reporting</li>
         <li>Dedicated account manager</li>
       </ul>
-      <a href="#schedule" class="btn-secondary" style="width:100%;text-align:center;display:block;">Schedule a Call →</a>
+      <a href="https://cal.com/crosslinkdigital/30min" class="btn-secondary" style="width:100%;text-align:center;display:block;">Schedule a Call →</a>
     </div>
   </div>
 </div>
 
-<div class="access-section" id="access">
-  <div class="access-inner">
-    <div class="section-label" style="text-align:center;display:block;margin-bottom:0.5rem;">Ready to start</div>
+<!-- TALLY FORM -->
+<div class="tally-section" id="get-started">
+  <div class="tally-inner">
+    <div class="section-label">Try it free</div>
     <h2>Get Your Free<br>Campaign Pack</h2>
-    <p>Enter your access code below to get started. No credit card required for your first pack.</p>
-    <div class="access-form">
-      <input type="text" placeholder="Your name" />
-      <input type="email" placeholder="Your email" />
-      <input type="text" placeholder="Your trade (e.g. Electrician, Plumber)" />
-      <input type="text" placeholder="Access code" />
-      <button type="button">Claim My Free Pack →</button>
+    <p class="tally-sub">Fill in the form below and we'll generate your complete marketing pack — copy, images, branded video and voiceover. No credit card needed.</p>
+    <div class="tally-embed">
+      <iframe data-tally-src="https://tally.so/embed/EkLZeq?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0" title="Get Your Free Marketing Pack"></iframe>
+      <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
     </div>
-    <p class="access-note">Access codes available to approved tradies only. <a href="mailto:hello@crosslinkdigital.com.au" style="color:var(--orange);">Request a code →</a></p>
   </div>
 </div>
 
-<div class="section" id="schedule" style="text-align:center;max-width:600px;">
+<!-- SCHEDULE CALL -->
+<div class="schedule-section" id="schedule">
   <div class="section-label" style="text-align:center;display:block;">Managed Socials Plan</div>
-  <h2 style="text-align:center;">Let's Talk.</h2>
-  <p style="color:#aaa;margin-bottom:2rem;">Book a free 30-minute discovery call and we'll walk you through how the Managed Socials plan works for your business.</p>
-  <a href="https://cal.com/crosslinkdigital" class="btn-primary" style="font-size:1.1rem;padding:1.1rem 2.8rem;">Schedule a Free Call →</a>
+  <h2>Let's Talk.</h2>
+  <p>Book a free 30-minute discovery call and we'll walk you through how the Managed Socials plan works for your business.</p>
+  <a href="https://cal.com/crosslinkdigital/30min" class="btn-primary" style="font-size:1.1rem;padding:1.1rem 2.8rem;">Schedule a Free Call →</a>
   <p style="color:#555;font-size:0.8rem;margin-top:1rem;">30 minutes · No obligation · Via Google Meet or Zoom</p>
 </div>
 
 <footer>
-  <p>© 2026 Crosslink Digital &nbsp;·&nbsp; <a href="mailto:hello@crosslinkdigital.com.au">hello@crosslinkdigital.com.au</a></p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="https://cal.com/crosslinkdigital/30min">Book a Call</a>
+    <a href="mailto:hayo@crosslinkasia.com">Contact</a>
+  </div>
+  <p>© 2026 Crosslink Digital · Part of the Crosslink Group &nbsp;·&nbsp; <a href="mailto:hayo@crosslinkasia.com">hayo@crosslinkasia.com</a></p>
 </footer>
 
 </body>
