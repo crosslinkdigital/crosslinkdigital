@@ -52,7 +52,6 @@
   .ticker span.dot { color: rgba(255,255,255,0.4); }
   @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-  /* PAIN SECTION */
   .pain-section { background: var(--grey); padding: 6rem 2rem; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
   .pain-inner { max-width: 900px; margin: 0 auto; }
   .pain-label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--orange); margin-bottom: 1rem; }
@@ -110,6 +109,7 @@
   .pricing-card.featured { border: 2px solid var(--orange); }
   .pricing-badge { position: absolute; top: -14px; left: 1.5rem; background: var(--orange); color: var(--white); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 14px; border-radius: 20px; }
   .pricing-name { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.8rem; }
+  .pricing-was { font-family: var(--font-display); font-size: 2rem; line-height: 1; color: #555; text-decoration: line-through; margin-bottom: 0.2rem; }
   .pricing-price { font-family: var(--font-display); font-size: 4.5rem; line-height: 1; color: var(--white); margin-bottom: 0.3rem; }
   .pricing-price sup { font-size: 1.8rem; vertical-align: top; margin-top: 0.6rem; display: inline-block; }
   .pricing-period { font-size: 0.85rem; color: var(--grey-text); margin-bottom: 1.5rem; }
@@ -118,7 +118,6 @@
   .pricing-features li { padding: 0.55rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.88rem; color: #ccc; display: flex; align-items: center; gap: 0.7rem; }
   .pricing-features li::before { content: ''; width: 16px; height: 16px; background: var(--orange); border-radius: 50%; flex-shrink: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E"); background-size: 10px; background-repeat: no-repeat; background-position: center; }
 
-  /* TALLY SECTION */
   .tally-section { background: var(--grey); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 6rem 2rem; }
   .tally-inner { max-width: 720px; margin: 0 auto; }
   .tally-inner .section-label { text-align: center; display: block; margin-bottom: 0.8rem; }
@@ -165,14 +164,14 @@
     <a href="#pricing">Pricing</a>
     <a href="about.html">About</a>
   </div>
-  <a href="#get-started" class="cta-nav">Get Started Free</a>
+  <a href="https://buy.stripe.com/aFa14n8TG7Ach1rcALgA800" class="cta-nav">Get Started</a>
 </nav>
 
 <section style="background: var(--black);">
   <div class="hero">
     <div class="hero-content">
       <div class="hero-eyebrow">For Tradies</div>
-     <h1>More Visibility.<br><span class="accent">More Calls.</span><br>Zero Extra Work.</h1>
+      <h1>More Visibility.<br><span class="accent">More Calls.</span><br>Zero Extra Work.</h1>
       <p class="hero-sub">Your competitors are posting on Facebook and Instagram every week. You're not. That's why their phone rings and yours doesn't. We fix that in 90 seconds.</p>
       <div class="hero-cta">
         <a href="#get-started" class="btn-primary">Get Your Free Pack →</a>
@@ -209,71 +208,31 @@
   </div>
 </div>
 
-<!-- PAIN SECTION -->
 <div class="pain-section">
   <div class="pain-inner">
     <div class="pain-label">Sound familiar?</div>
     <h2>Does This<br>Describe You?</h2>
     <p class="pain-intro">Most tradies we speak to are brilliant at what they do. The marketing side? That's a different story.</p>
     <div class="pain-grid">
-      <div class="pain-item">
-        <div class="pain-check"></div>
-        <p>You're too busy on the tools to think about Instagram</p>
-      </div>
-      <div class="pain-item">
-        <div class="pain-check"></div>
-        <p>You rely on word of mouth but it's getting unpredictable</p>
-      </div>
-      <div class="pain-item">
-        <div class="pain-check"></div>
-        <p>You know you should be posting but never get around to it</p>
-      </div>
-      <div class="pain-item">
-        <div class="pain-check"></div>
-        <p>Agencies want $2,000+ a month and can't promise results</p>
-      </div>
-      <div class="pain-item">
-        <div class="pain-check"></div>
-        <p>Your competitors are showing up online and getting the calls</p>
-      </div>
-      <div class="pain-item">
-        <div class="pain-check"></div>
-        <p>You don't know what to write or how to make it look professional</p>
-      </div>
+      <div class="pain-item"><div class="pain-check"></div><p>You're too busy on the tools to think about Instagram</p></div>
+      <div class="pain-item"><div class="pain-check"></div><p>You rely on word of mouth but it's getting unpredictable</p></div>
+      <div class="pain-item"><div class="pain-check"></div><p>You know you should be posting but never get around to it</p></div>
+      <div class="pain-item"><div class="pain-check"></div><p>Agencies want $2,000+ a month and can't promise results</p></div>
+      <div class="pain-item"><div class="pain-check"></div><p>Your competitors are showing up online and getting the calls</p></div>
+      <div class="pain-item"><div class="pain-check"></div><p>You don't know what to write or how to make it look professional</p></div>
     </div>
     <p class="pain-resolution">If you nodded at any of those — you're exactly who we built this for.</p>
   </div>
 </div>
 
-<!-- HOW IT WORKS -->
 <div class="section" id="how-it-works">
   <div class="section-label">How it works</div>
   <h2>4 Steps.<br>90sec.</h2>
   <div class="steps">
-    <div class="step">
-      <div class="step-num">1</div>
-      <div class="step-icon">📋</div>
-      <h3>Fill in your details</h3>
-      <p>Your trade, your offer, your logo. Takes 2 minutes flat.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">2</div>
-      <div class="step-icon">⚡</div>
-      <h3>AI builds your campaign</h3>
-      <p>Copy, images, commercial voiceover and a branded video — all generated automatically.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">3</div>
-      <div class="step-icon">📧</div>
-      <h3>Pack lands in your inbox</h3>
-      <p>Everything delivered in minutes. Ready to post, no editing needed.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">4</div>
-      <div class="step-icon">📈</div>
-      <h3>Post and get leads</h3>
-      <p>Grab the content, post it, and watch the enquiries roll in.</p>
-    </div>
+    <div class="step"><div class="step-num">1</div><div class="step-icon">📋</div><h3>Fill in your details</h3><p>Your trade, your offer, your logo. Takes 2 minutes flat.</p></div>
+    <div class="step"><div class="step-num">2</div><div class="step-icon">⚡</div><h3>AI builds your campaign</h3><p>Copy, images, commercial voiceover and a branded video — all generated automatically.</p></div>
+    <div class="step"><div class="step-num">3</div><div class="step-icon">📧</div><h3>Pack lands in your inbox</h3><p>Everything delivered in minutes. Ready to post, no editing needed.</p></div>
+    <div class="step"><div class="step-num">4</div><div class="step-icon">📈</div><h3>Post and get leads</h3><p>Grab the content, post it, and watch the enquiries roll in.</p></div>
   </div>
 </div>
 
@@ -294,36 +253,12 @@
   <div class="section-label">What's included</div>
   <h2>Everything You<br>Need to Post.</h2>
   <div class="deliverables">
-    <div class="deliverable">
-      <div class="deliverable-icon">✍️</div>
-      <h4>Campaign Copy Doc</h4>
-      <p>FB posts, Google ads, Instagram captions — written for your trade.</p>
-    </div>
-    <div class="deliverable">
-      <div class="deliverable-icon">🖼️</div>
-      <h4>3 AI-Generated Images</h4>
-      <p>Tradie at work, tools close-up, job site. Ready to post instantly.</p>
-    </div>
-    <div class="deliverable">
-      <div class="deliverable-icon">🎬</div>
-      <h4>Branded Promo Video</h4>
-      <p>10-second video with your logo, offer text, and voiceover.</p>
-    </div>
-    <div class="deliverable">
-      <div class="deliverable-icon">🎙️</div>
-      <h4>Commercial Grade Voiceover</h4>
-      <p>Professional voice reads your offer. No recording needed.</p>
-    </div>
-    <div class="deliverable">
-      <div class="deliverable-icon">📱</div>
-      <h4>Multi-Platform Ready</h4>
-      <p>Formatted for Facebook, Instagram, TikTok, and more.</p>
-    </div>
-    <div class="deliverable">
-      <div class="deliverable-icon">⚡</div>
-      <h4>Delivered in Minutes</h4>
-      <p>Straight to your inbox. No waiting, no back and forth.</p>
-    </div>
+    <div class="deliverable"><div class="deliverable-icon">✍️</div><h4>Campaign Copy Doc</h4><p>FB posts, Google ads, Instagram captions — written for your trade.</p></div>
+    <div class="deliverable"><div class="deliverable-icon">🖼️</div><h4>3 AI-Generated Images</h4><p>Tradie at work, tools close-up, job site. Ready to post instantly.</p></div>
+    <div class="deliverable"><div class="deliverable-icon">🎬</div><h4>Branded Promo Video</h4><p>10-second video with your logo, offer text, and voiceover.</p></div>
+    <div class="deliverable"><div class="deliverable-icon">🎙️</div><h4>Commercial Grade Voiceover</h4><p>Professional voice reads your offer. No recording needed.</p></div>
+    <div class="deliverable"><div class="deliverable-icon">📱</div><h4>Multi-Platform Ready</h4><p>Formatted for Facebook, Instagram, TikTok, and more.</p></div>
+    <div class="deliverable"><div class="deliverable-icon">⚡</div><h4>Delivered in Minutes</h4><p>Straight to your inbox. No waiting, no back and forth.</p></div>
   </div>
 </div>
 
@@ -340,22 +275,10 @@
 <div class="section">
   <div class="divider"></div>
   <div class="stat-row">
-    <div class="stat">
-      <div class="stat-num">90sec</div>
-      <div class="stat-label">Campaign delivery time</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">6+</div>
-      <div class="stat-label">Ready-to-post assets per run</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">0</div>
-      <div class="stat-label">Hours of your time needed</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">$0</div>
-      <div class="stat-label">Agency fees ever</div>
-    </div>
+    <div class="stat"><div class="stat-num">90sec</div><div class="stat-label">Campaign delivery time</div></div>
+    <div class="stat"><div class="stat-num">6+</div><div class="stat-label">Ready-to-post assets per run</div></div>
+    <div class="stat"><div class="stat-num">0</div><div class="stat-label">Hours of your time needed</div></div>
+    <div class="stat"><div class="stat-num">$0</div><div class="stat-label">Agency fees ever</div></div>
   </div>
 </div>
 
@@ -379,6 +302,7 @@
     <div class="pricing-card featured">
       <div class="pricing-badge">Most popular</div>
       <div class="pricing-name">DIY Pack</div>
+      <div class="pricing-was"><sup style="font-size:1rem;">$</sup>200</div>
       <div class="pricing-price"><sup>$</sup>49</div>
       <div class="pricing-period">AUD per month · cancel anytime</div>
       <div class="pricing-desc">We generate your full campaign pack and deliver it to your inbox. You post it yourself.</div>
@@ -391,7 +315,7 @@
         <li>FB, Instagram, TikTok ready</li>
         <li>Delivered in minutes</li>
       </ul>
-      <a href="#get-started" class="btn-primary" style="width:100%;text-align:center;display:block;">Get Started Free →</a>
+      <a href="https://buy.stripe.com/aFa14n8TG7Ach1rcALgA800" class="btn-primary" style="width:100%;text-align:center;display:block;">Get Started →</a>
     </div>
     <div class="pricing-card">
       <div class="pricing-name">Managed Socials</div>
@@ -413,7 +337,6 @@
   </div>
 </div>
 
-<!-- TALLY FORM -->
 <div class="tally-section" id="get-started">
   <div class="tally-inner">
     <div class="section-label">Try it free</div>
@@ -426,7 +349,6 @@
   </div>
 </div>
 
-<!-- SCHEDULE CALL -->
 <div class="schedule-section" id="schedule">
   <div class="section-label" style="text-align:center;display:block;">Managed Socials Plan</div>
   <h2>Let's Talk.</h2>
